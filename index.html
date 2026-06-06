@@ -127,7 +127,7 @@
             font-weight: 600;
         }
 
-        /* Education Layout */
+        /* Qualification Layout */
         .edu-item {
             margin-bottom: 20px;
             padding-left: 15px;
@@ -189,6 +189,9 @@
             border-radius: 8px;
             background: #fafafa;
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .cert-card:hover {
@@ -196,16 +199,20 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .cert-card h3 {
-            font-size: 1.15rem;
-            color: #222;
-            margin-bottom: 5px;
+        .cert-card h3 a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .cert-card h3 a:hover {
+            text-decoration: underline;
         }
 
         .cert-meta {
-            color: #007bff;
+            color: #555;
             font-size: 0.9rem;
             font-weight: 600;
+            margin-top: 5px;
             margin-bottom: 8px;
         }
 
@@ -214,6 +221,34 @@
             font-size: 0.85rem;
             font-style: italic;
             margin-bottom: 10px;
+        }
+
+        .cert-tags {
+            margin: 8px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e1ecf4;
+            color: #39739d;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+
+        .view-cert-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .view-cert-link:hover {
+            text-decoration: underline;
         }
 
         /* Button Styling */
@@ -251,7 +286,7 @@
     <!-- Navigation Menu -->
     <nav>
         <a href="#about">About Me</a>
-        <a href="#education">Education</a>
+        <a href="#qualification">Qualification</a>
         <a href="#skills">Skills</a>
         <a href="#certificates">Certificates</a>
         <a href="#resume">Resume</a>
@@ -261,7 +296,7 @@
 
         <!-- About Me Section -->
         <section id="about" class="hero">
-            <!-- This looks directly for your uploaded file in the GitHub repository -->
+            <!-- Profile pic matching profile.jpg format -->
             <img src="profile.jpg" alt="Abhisek Paramanik" class="profile-pic">
             
             <h1>Abhisek Paramanik</h1>
@@ -276,18 +311,16 @@
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
+        <!-- Qualification Section -->
+        <section id="qualification">
+            <h2>Qualification</h2>
             
-            <!-- University Degree -->
             <div class="edu-item">
                 <h3>B.Tech in Computer Science & Engineering (AI & ML)</h3>
                 <div class="meta">Raajdhani Engineering College</div>
                 <div class="score">Status: Currently Pursuing</div>
             </div>
 
-            <!-- 12th Standard -->
             <div class="edu-item">
                 <h3>12th Standard (Higher Secondary School Certificate)</h3>
                 <div class="meta">Maharshi Gurukul (2024)</div>
@@ -321,25 +354,78 @@
             </div>
         </section>
 
-        <!-- Dynamic Certificates Section -->
+        <!-- Certificates Section -->
         <section id="certificates">
             <h2>Certificates</h2>
             <div class="cert-grid">
                 
-                <!-- Certificate 1: NxtWave -->
+                <!-- Build Your Own Static Website (Updated to .jpg) -->
                 <div class="cert-card">
-                    <h3>AI for Students: Build Your Own Generative AI Model</h3>
-                    <div class="cert-meta">Issued by: NxtWave™ (Workshop by Expert Mr. Abhinav Devaguptapu)</div>
-                    <div class="cert-date">Date: November 25, 2024</div>
-                    <p>Participated in hands-on training structured to equip tech students with essential core building blocks required in the artificial intelligence era.</p>
+                    <div>
+                        <h3><a href="static-website-cert.jpg" target="_blank">Build Your Own Static Website ↗</a></h3>
+                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
+                        <div class="cert-date">Date: September 22, 2025</div>
+                        <p>Successfully completed training foundational to modern web creation architectures.</p>
+                        <div class="cert-tags">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">Bootstrap</span>
+                        </div>
+                    </div>
+                    <a href="static-website-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
                 </div>
 
-                <!-- Certificate 2: YCAT -->
+                <!-- Build Your Own Responsive Website (Updated to .jpg) -->
                 <div class="cert-card">
-                    <h3>Internship Common Aptitude Test (YCAT)</h3>
-                    <div class="cert-meta">Issued by: YCAT (Participation Validation)</div>
-                    <div class="cert-date">Date: 21st April, 2025</div>
-                    <p>Recognized for commitment and aptitude performance in standard validation metrics targeted toward corporate internship readiness.</p>
+                    <div>
+                        <h3><a href="responsive-website-cert.jpg" target="_blank">Build Your Own Responsive Website ↗</a></h3>
+                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
+                        <div class="cert-date">Date: September 23, 2025</div>
+                        <p>Certified in implementing mobile-first components and layouts across multi-screen dimensions.</p>
+                        <div class="cert-tags">
+                            <span class="badge">Bootstrap</span>
+                            <span class="badge">Flexbox</span>
+                        </div>
+                    </div>
+                    <a href="responsive-website-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+                </div>
+
+                <!-- NxtWave Workshop Certificate (Updated to .jpg) -->
+                <div class="cert-card">
+                    <div>
+                        <h3><a href="nxtwave.jpg" target="_blank">AI for Students: Build Your Own Generative AI Model ↗</a></h3>
+                        <div class="cert-meta">Issued by: NxtWave™ (Workshop by Mr. Abhinav Devaguptapu)</div>
+                        <div class="cert-date">Date: November 25, 2024</div>
+                        <p>Participated in hands-on training structured to equip tech students with essential core building blocks required in the artificial intelligence era.</p>
+                    </div>
+                    <a href="nxtwave.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+                </div>
+
+                <!-- XPM 4.0 Fundamentals (Updated to .jpg) -->
+                <div class="cert-card">
+                    <div>
+                        <h3><a href="xpm-fundamentals-cert.jpg" target="_blank">XPM 4.0 Fundamentals ↗</a></h3>
+                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
+                        <div class="cert-date">Date: April 28, 2026</div>
+                        <p>Achieved validation for strategic mindset skills focusing on exponential high-performance execution patterns.</p>
+                        <div class="cert-tags">
+                            <span class="badge">Personal Identity</span>
+                            <span class="badge">Integrity</span>
+                            <span class="badge">Goal Setting</span>
+                        </div>
+                    </div>
+                    <a href="xpm-fundamentals-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+                </div>
+
+                <!-- YCAT (Updated to .jpg) -->
+                <div class="cert-card">
+                    <div>
+                        <h3><a href="ycat.jpg" target="_blank">Internship Common Aptitude Test (YCAT) ↗</a></h3>
+                        <div class="cert-meta">Issued by: YCAT (Participation Validation)</div>
+                        <div class="cert-date">Date: 21st April, 2025</div>
+                        <p>Recognized for commitment and aptitude performance in standard validation metrics targeted toward corporate internship readiness.</p>
+                    </div>
+                    <a href="ycat.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
                 </div>
 
             </div>
@@ -350,7 +436,6 @@
             <h2>Resume</h2>
             <p>Click the button below to view or download a comprehensive copy of my professional resume document.</p>
             <div class="center-btn">
-                <!-- Ensure your document is named "resume.pdf" inside your repository folder -->
                 <a href="resume.pdf" target="_blank" class="btn">View Full Resume (PDF)</a>
             </div>
         </section>
