@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhisek Paramanik - Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0056b3;
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 900px;
+            margin: 80px auto 40px auto;
+            padding: 20px;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Hero / About Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; 
+            object-fit: cover;  
+            border: 4px solid #007bff; 
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: #222;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+            font-style: italic;
+        }
+
+        /* Contact Details Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: #f1f7ff;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-top: 20px;
+        }
+
+        .contact-grid div {
+            color: #444;
+        }
+
+        .contact-grid a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Education Layout */
+        .edu-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #007bff;
+        }
+
+        .edu-item h3 {
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        .edu-item .meta {
+            font-size: 0.95rem;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .edu-item .score {
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Skills and Languages lists */
+        .list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .list-card h3 {
+            font-size: 1.1rem;
+            color: #222;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        /* Certificates Grid styling */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-card {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fafafa;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .cert-card h3 {
+            font-size: 1.15rem;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .cert-meta {
+            color: #007bff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .cert-date {
+            color: #777;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+            box-shadow: 0 2px 4px rgba(0,123,255,0.3);
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .center-btn {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#resume">Resume</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- About Me Section -->
+        <section id="about" class="hero">
+            <!-- This looks directly for your uploaded file in the GitHub repository -->
+            <img src="profile.jpg" alt="Abhisek Paramanik" class="profile-pic">
+            
+            <h1>Abhisek Paramanik</h1>
+            <div class="subtitle">B.Tech in CSE (AI & ML)</div>
+            <p>"I seek challenging opportunities where I can fully use my skills for the success of the organization."</p>
+            
+            <div class="contact-grid">
+                <div>📍 <strong>Address:</strong> Gop, Puri, Odisha - 752110</div>
+                <div>📞 <strong>Phone:</strong> 8763185193</div>
+                <div>✉️ <strong>Email:</strong> <a href="mailto:abhisekparamanik47@gmail.com">abhisekparamanik47@gmail.com</a></div>
+                <div>🎂 <strong>DOB:</strong> 22/07/2006</div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            
+            <!-- University Degree -->
+            <div class="edu-item">
+                <h3>B.Tech in Computer Science & Engineering (AI & ML)</h3>
+                <div class="meta">Raajdhani Engineering College</div>
+                <div class="score">Status: Currently Pursuing</div>
+            </div>
+
+            <!-- 12th Standard -->
+            <div class="edu-item">
+                <h3>12th Standard (Higher Secondary School Certificate)</h3>
+                <div class="meta">Maharshi Gurukul (2024)</div>
+                <div class="score">Grade/Score: 60%</div>
+            </div>
+        </section>
+
+        <!-- Skills and Languages Section -->
+        <section id="skills">
+            <h2>Skills & Languages</h2>
+            <div class="list-grid">
+                <div class="list-card">
+                    <h3>Core Skills</h3>
+                    <ul>
+                        <li>Computer Proficiency & Software Knowledge</li>
+                        <li>Problem-Solving Abilities</li>
+                        <li>Leadership Experience</li>
+                        <li>Effective Communication & People Skills</li>
+                        <li>Organizational Know-How</li>
+                        <li>Collaboration Talent</li>
+                    </ul>
+                </div>
+                <div class="list-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Odia (Native)</li>
+                        <li>Hindi</li>
+                        <li>English (Speaking)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Certificates Section -->
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <div class="cert-grid">
+                
+                <!-- Certificate 1: NxtWave -->
+                <div class="cert-card">
+                    <h3>AI for Students: Build Your Own Generative AI Model</h3>
+                    <div class="cert-meta">Issued by: NxtWave™ (Workshop by Expert Mr. Abhinav Devaguptapu)</div>
+                    <div class="cert-date">Date: November 25, 2024</div>
+                    <p>Participated in hands-on training structured to equip tech students with essential core building blocks required in the artificial intelligence era.</p>
+                </div>
+
+                <!-- Certificate 2: YCAT -->
+                <div class="cert-card">
+                    <h3>Internship Common Aptitude Test (YCAT)</h3>
+                    <div class="cert-meta">Issued by: YCAT (Participation Validation)</div>
+                    <div class="cert-date">Date: 21st April, 2025</div>
+                    <p>Recognized for commitment and aptitude performance in standard validation metrics targeted toward corporate internship readiness.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Click the button below to view or download a comprehensive copy of my professional resume document.</p>
+            <div class="center-btn">
+                <!-- Ensure your document is named "resume.pdf" inside your repository folder -->
+                <a href="resume.pdf" target="_blank" class="btn">View Full Resume (PDF)</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abhisek Paramanik. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
