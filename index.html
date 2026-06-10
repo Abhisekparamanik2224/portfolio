@@ -105,6 +105,36 @@
             font-style: italic;
         }
 
+        /* Profile Summary Details layout */
+        .profile-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .profile-card {
+            background: #fafafa;
+            border-left: 3px solid #007bff;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .profile-card h4 {
+            color: #222;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .profile-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+            font-style: normal;
+            text-align: left;
+        }
+
         /* Contact Details Grid */
         .contact-grid {
             display: grid;
@@ -283,7 +313,6 @@
 </head>
 <body>
 
-    <!-- Navigation Menu -->
     <nav>
         <a href="#about">About Me</a>
         <a href="#qualification">Qualification</a>
@@ -294,15 +323,29 @@
 
     <div class="container">
 
-        <!-- About Me Section -->
         <section id="about" class="hero">
-            <!-- Profile pic matching profile.jpg format -->
             <img src="profile.jpg" alt="Abhisek Paramanik" class="profile-pic">
             
             <h1>Abhisek Paramanik</h1>
             <div class="subtitle">B.Tech in CSE (AI & ML)</div>
-            <p>"I seek challenging opportunities where I can fully use my skills for the success of the organization."</p>
             
+            <p>"I am a highly motivated individual currently pursuing my bachelor's degree at Raajdhani Engineering College, looking forward to building an impactful professional journey."</p>
+            
+            <div class="profile-details-grid">
+                <div class="profile-card">
+                    <h4>🌟 Strengths</h4>
+                    <p>Hardworking professional with a smart approach to tasks. A quick learner and self-motivated individual backed by excellent, clear communication skills.</p>
+                </div>
+                <div class="profile-card">
+                    <h4>🎯 My Goals & Upskilling</h4>
+                    <p><strong>Ongoing:</strong> Currently pursuing an online Full Stack development course with NxtWave.<br><strong>Short-Term:</strong> Secure a role within a reputed organization.<br><strong>Long-Term:</strong> Attain a progressive position to scale my career.</p>
+                </div>
+                <div class="profile-card">
+                    <h4>🎨 Hobbies & Family</h4>
+                    <p>Belonging to a close-knit nuclear family. I am passionate about tackling complex challenges, reading books, and relaxing with deep music.</p>
+                </div>
+            </div>
+
             <div class="contact-grid">
                 <div>📍 <strong>Address:</strong> Gop, Puri, Odisha - 752110</div>
                 <div>📞 <strong>Phone:</strong> 8763185193</div>
@@ -311,7 +354,6 @@
             </div>
         </section>
 
-        <!-- Qualification Section -->
         <section id="qualification">
             <h2>Qualification</h2>
             
@@ -326,21 +368,26 @@
                 <div class="meta">Maharshi Gurukul (2024)</div>
                 <div class="score">Grade/Score: 60%</div>
             </div>
+
+            <div class="edu-item">
+                <h3>10th Standard (Secondary School Certificate)</h3>
+                <div class="meta">Saraswati Shishu Vidya Mandir</div>
+                <div class="score">Grade/Score: 75%</div>
+            </div>
         </section>
 
-        <!-- Skills and Languages Section -->
         <section id="skills">
             <h2>Skills & Languages</h2>
             <div class="list-grid">
                 <div class="list-card">
                     <h3>Core Skills</h3>
                     <ul>
-                        <li>Computer Proficiency & Software Knowledge</li>
-                        <li>Problem-Solving Abilities</li>
-                        <li>Leadership Experience</li>
+                        <li>Programming Languages: <strong>Python</strong></li>
+                        <li>Database Management: <strong>SQL / Relational Databases</strong></li>
+                        <li>Web Development: <strong>HTML, CSS, Bootstrap</strong></li>
+                        <li>Problem-Solving Abilities & Core AI concepts</li>
+                        <li>Leadership & Collaboration Experience</li>
                         <li>Effective Communication & People Skills</li>
-                        <li>Organizational Know-How</li>
-                        <li>Collaboration Talent</li>
                     </ul>
                 </div>
                 <div class="list-card">
@@ -354,12 +401,38 @@
             </div>
         </section>
 
-        <!-- Certificates Section -->
         <section id="certificates">
             <h2>Certificates</h2>
             <div class="cert-grid">
                 
-                <!-- Build Your Own Static Website (Updated to .jpg) -->
+                <div class="cert-card">
+                    <div>
+                        <h3><a href="programming-foundation-cert.jpg" target="_blank">Programming Foundations with Python ↗</a></h3>
+                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
+                        <div class="cert-date">Date: June 08, 2026</div>
+                        <p>Certified in core programming foundations, foundational algorithms, and scripting logic using Python syntax frameworks.</p>
+                        <div class="cert-tags">
+                            <span class="badge">Python</span>
+                            <span class="badge">Programming Logic</span>
+                        </div>
+                    </div>
+                    <a href="programming-foundation-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <div>
+                        <h3><a href="database-cert.jpg" target="_blank">Introduction to Databases ↗</a></h3>
+                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
+                        <div class="cert-date">Date: June 07, 2026</div>
+                        <p>Successfully completed professional mastery benchmarks over Structured Query Language (SQL) and relational schema operations.</p>
+                        <div class="cert-tags">
+                            <span class="badge">SQL</span>
+                            <span class="badge">Databases</span>
+                        </div>
+                    </div>
+                    <a href="database-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+                </div>
+
                 <div class="cert-card">
                     <div>
                         <h3><a href="static-website-cert.jpg" target="_blank">Build Your Own Static Website ↗</a></h3>
@@ -375,7 +448,6 @@
                     <a href="static-website-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
                 </div>
 
-                <!-- Build Your Own Responsive Website (Updated to .jpg) -->
                 <div class="cert-card">
                     <div>
                         <h3><a href="responsive-website-cert.jpg" target="_blank">Build Your Own Responsive Website ↗</a></h3>
@@ -390,7 +462,6 @@
                     <a href="responsive-website-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
                 </div>
 
-                <!-- NxtWave Workshop Certificate (Updated to .jpg) -->
                 <div class="cert-card">
                     <div>
                         <h3><a href="nxtwave.jpg" target="_blank">AI for Students: Build Your Own Generative AI Model ↗</a></h3>
@@ -401,7 +472,6 @@
                     <a href="nxtwave.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
                 </div>
 
-                <!-- XPM 4.0 Fundamentals (Updated to .jpg) -->
                 <div class="cert-card">
                     <div>
                         <h3><a href="xpm-fundamentals-cert.jpg" target="_blank">XPM 4.0 Fundamentals ↗</a></h3>
@@ -417,7 +487,6 @@
                     <a href="xpm-fundamentals-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
                 </div>
 
-                <!-- YCAT (Updated to .jpg) -->
                 <div class="cert-card">
                     <div>
                         <h3><a href="ycat.jpg" target="_blank">Internship Common Aptitude Test (YCAT) ↗</a></h3>
@@ -431,7 +500,6 @@
             </div>
         </section>
 
-        <!-- Resume Section -->
         <section id="resume">
             <h2>Resume</h2>
             <p>Click the button below to view or download a comprehensive copy of my professional resume document.</p>
