@@ -1,11 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhisek Paramanik - Portfolio</title>
+
     <style>
-        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -75,9 +76,9 @@
         .profile-pic {
             width: 160px;
             height: 160px;
-            border-radius: 50%; 
-            object-fit: cover;  
-            border: 4px solid #007bff; 
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007bff;
             margin-bottom: 15px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -105,7 +106,7 @@
             font-style: italic;
         }
 
-        /* Profile Summary Details layout */
+        /* Profile Summary */
         .profile-details-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -135,7 +136,7 @@
             text-align: left;
         }
 
-        /* Contact Details Grid */
+        /* Contact Details */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -157,7 +158,7 @@
             font-weight: 600;
         }
 
-        /* Qualification Layout */
+        /* Qualification */
         .edu-item {
             margin-bottom: 20px;
             padding-left: 15px;
@@ -182,7 +183,7 @@
             font-style: italic;
         }
 
-        /* Skills and Languages lists */
+        /* Skills */
         .list-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -206,7 +207,7 @@
             color: #444;
         }
 
-        /* Certificates Grid styling */
+        /* Certificates */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -281,7 +282,72 @@
             text-decoration: underline;
         }
 
-        /* Button Styling */
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fafafa;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .project-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 11px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .social-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Button */
         .btn {
             display: inline-block;
             background-color: #007bff;
@@ -311,208 +377,576 @@
         }
     </style>
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <nav>
         <a href="#about">About Me</a>
         <a href="#qualification">Qualification</a>
         <a href="#skills">Skills</a>
         <a href="#certificates">Certificates</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
         <a href="#resume">Resume</a>
     </nav>
 
     <div class="container">
 
+        <!-- About -->
         <section id="about" class="hero">
-            <img src="profile.jpg" alt="Abhisek Paramanik" class="profile-pic">
-            
+
+            <img src="profile.jpg"
+                 alt="Abhisek Paramanik"
+                 class="profile-pic">
+
             <h1>Abhisek Paramanik</h1>
-            <div class="subtitle">B.Tech in CSE (AI & ML)</div>
-            
-            <p>"I am a highly motivated individual currently pursuing my bachelor's degree at Raajdhani Engineering College, looking forward to building an impactful professional journey."</p>
-            
+
+            <div class="subtitle">
+                B.Tech in CSE (AI & ML)
+            </div>
+
+            <p>
+                "I am a highly motivated individual currently pursuing my bachelor's
+                degree at Raajdhani Engineering College, looking forward to building
+                an impactful professional journey."
+            </p>
+
             <div class="profile-details-grid">
+
                 <div class="profile-card">
                     <h4>🌟 Strengths</h4>
-                    <p>Hardworking professional with a smart approach to tasks. A quick learner and self-motivated individual backed by excellent, clear communication skills.</p>
+                    <p>
+                        Hardworking professional with a smart approach to tasks.
+                        A quick learner and self-motivated individual backed by
+                        excellent, clear communication skills.
+                    </p>
                 </div>
+
                 <div class="profile-card">
                     <h4>🎯 My Goals & Upskilling</h4>
-                    <p><strong>Ongoing:</strong> Currently pursuing an online Full Stack development course with NxtWave.<br><strong>Short-Term:</strong> Secure a role within a reputed organization.<br><strong>Long-Term:</strong> Attain a progressive position to scale my career.</p>
+                    <p>
+                        <strong>Ongoing:</strong> Currently pursuing an online
+                        Full Stack development course with NxtWave.<br>
+                        <strong>Short-Term:</strong> Secure a role within a reputed
+                        organization.<br>
+                        <strong>Long-Term:</strong> Attain a progressive position
+                        to scale my career.
+                    </p>
                 </div>
+
                 <div class="profile-card">
                     <h4>🎨 Hobbies & Family</h4>
-                    <p>Belonging to a close-knit nuclear family. I am passionate about tackling complex challenges, reading books, and relaxing with deep music.</p>
+                    <p>
+                        Belonging to a close-knit nuclear family. I am passionate
+                        about tackling complex challenges, reading books, and
+                        relaxing with deep music.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Only Email - Address, Phone and DOB Removed -->
+            <div class="contact-grid">
+                <div>
+                    ✉️ <strong>Email:</strong>
+                    <a href="mailto:abhisekparamanik47@gmail.com">
+                        abhisekparamanik47@gmail.com
+                    </a>
                 </div>
             </div>
 
-            <div class="contact-grid">
-                <div>📍 <strong>Address:</strong> Gop, Puri, Odisha - 752110</div>
-                <div>📞 <strong>Phone:</strong> 8763185193</div>
-                <div>✉️ <strong>Email:</strong> <a href="mailto:abhisekparamanik47@gmail.com">abhisekparamanik47@gmail.com</a></div>
-                <div>🎂 <strong>DOB:</strong> 22/07/2006</div>
-            </div>
         </section>
 
+
+        <!-- Qualification -->
         <section id="qualification">
+
             <h2>Qualification</h2>
-            
+
             <div class="edu-item">
-                <h3>B.Tech in Computer Science & Engineering (AI & ML)</h3>
-                <div class="meta">Raajdhani Engineering College</div>
-                <div class="score">Status: Currently Pursuing</div>
+                <h3>
+                    B.Tech in Computer Science & Engineering (AI & ML)
+                </h3>
+                <div class="meta">
+                    Raajdhani Engineering College
+                </div>
+                <div class="score">
+                    Status: Currently Pursuing
+                </div>
             </div>
 
             <div class="edu-item">
-                <h3>12th Standard (Higher Secondary School Certificate)</h3>
-                <div class="meta">Maharshi Gurukul (2024)</div>
-                <div class="score">Grade/Score: 60%</div>
+                <h3>
+                    12th Standard (Higher Secondary School Certificate)
+                </h3>
+                <div class="meta">
+                    Maharshi Gurukul (2024)
+                </div>
+                <div class="score">
+                    Grade/Score: 60%
+                </div>
             </div>
 
             <div class="edu-item">
-                <h3>10th Standard (Secondary School Certificate)</h3>
-                <div class="meta">Saraswati Shishu Vidya Mandir</div>
-                <div class="score">Grade/Score: 75%</div>
+                <h3>
+                    10th Standard (Secondary School Certificate)
+                </h3>
+                <div class="meta">
+                    Saraswati Shishu Vidya Mandir
+                </div>
+                <div class="score">
+                    Grade/Score: 75%
+                </div>
             </div>
+
         </section>
 
+
+        <!-- Skills -->
         <section id="skills">
+
             <h2>Skills & Languages</h2>
+
             <div class="list-grid">
+
                 <div class="list-card">
                     <h3>Core Skills</h3>
+
                     <ul>
-                        <li>Programming Languages: <strong>Python</strong></li>
-                        <li>Database Management: <strong>SQL / Relational Databases</strong></li>
-                        <li>Web Development: <strong>HTML, CSS, Bootstrap</strong></li>
-                        <li>Problem-Solving Abilities & Core AI concepts</li>
-                        <li>Leadership & Collaboration Experience</li>
-                        <li>Effective Communication & People Skills</li>
+                        <li>
+                            Programming Languages:
+                            <strong>Python</strong>
+                        </li>
+
+                        <li>
+                            Database Management:
+                            <strong>SQL / Relational Databases</strong>
+                        </li>
+
+                        <li>
+                            Web Development:
+                            <strong>HTML, CSS, Bootstrap</strong>
+                        </li>
+
+                        <li>
+                            Problem-Solving Abilities & Core AI concepts
+                        </li>
+
+                        <li>
+                            Leadership & Collaboration Experience
+                        </li>
+
+                        <li>
+                            Effective Communication & People Skills
+                        </li>
                     </ul>
                 </div>
+
+
                 <div class="list-card">
+
                     <h3>Languages</h3>
+
                     <ul>
                         <li>Odia (Native)</li>
                         <li>Hindi</li>
                         <li>English (Speaking)</li>
                     </ul>
+
                 </div>
+
             </div>
+
         </section>
 
+
+        <!-- Certificates -->
         <section id="certificates">
+
             <h2>Certificates</h2>
+
             <div class="cert-grid">
-                
+
                 <div class="cert-card">
                     <div>
-                        <h3><a href="programming-foundation-cert.jpg" target="_blank">Programming Foundations with Python ↗</a></h3>
-                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
-                        <div class="cert-date">Date: June 08, 2026</div>
-                        <p>Certified in core programming foundations, foundational algorithms, and scripting logic using Python syntax frameworks.</p>
+                        <h3>
+                            <a href="programming-foundation-cert.jpg"
+                               target="_blank">
+                                Programming Foundations with Python ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: CCBP 4.0 Academy / NxtWave™
+                        </div>
+
+                        <div class="cert-date">
+                            Date: June 08, 2026
+                        </div>
+
+                        <p>
+                            Certified in core programming foundations,
+                            foundational algorithms, and scripting logic
+                            using Python syntax frameworks.
+                        </p>
+
                         <div class="cert-tags">
                             <span class="badge">Python</span>
                             <span class="badge">Programming Logic</span>
                         </div>
                     </div>
-                    <a href="programming-foundation-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="programming-foundation-cert.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
+
 
                 <div class="cert-card">
                     <div>
-                        <h3><a href="database-cert.jpg" target="_blank">Introduction to Databases ↗</a></h3>
-                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
-                        <div class="cert-date">Date: June 07, 2026</div>
-                        <p>Successfully completed professional mastery benchmarks over Structured Query Language (SQL) and relational schema operations.</p>
+                        <h3>
+                            <a href="database-cert.jpg"
+                               target="_blank">
+                                Introduction to Databases ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: CCBP 4.0 Academy / NxtWave™
+                        </div>
+
+                        <div class="cert-date">
+                            Date: June 07, 2026
+                        </div>
+
+                        <p>
+                            Successfully completed professional mastery
+                            benchmarks over Structured Query Language (SQL)
+                            and relational schema operations.
+                        </p>
+
                         <div class="cert-tags">
                             <span class="badge">SQL</span>
                             <span class="badge">Databases</span>
                         </div>
                     </div>
-                    <a href="database-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="database-cert.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
+
 
                 <div class="cert-card">
                     <div>
-                        <h3><a href="static-website-cert.jpg" target="_blank">Build Your Own Static Website ↗</a></h3>
-                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
-                        <div class="cert-date">Date: September 22, 2025</div>
-                        <p>Successfully completed training foundational to modern web creation architectures.</p>
+                        <h3>
+                            <a href="static-website-cert.jpg"
+                               target="_blank">
+                                Build Your Own Static Website ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: CCBP 4.0 Academy / NxtWave™
+                        </div>
+
+                        <div class="cert-date">
+                            Date: September 22, 2025
+                        </div>
+
+                        <p>
+                            Successfully completed training foundational
+                            to modern web creation architectures.
+                        </p>
+
                         <div class="cert-tags">
                             <span class="badge">HTML</span>
                             <span class="badge">CSS</span>
                             <span class="badge">Bootstrap</span>
                         </div>
                     </div>
-                    <a href="static-website-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="static-website-cert.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
+
 
                 <div class="cert-card">
                     <div>
-                        <h3><a href="responsive-website-cert.jpg" target="_blank">Build Your Own Responsive Website ↗</a></h3>
-                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
-                        <div class="cert-date">Date: September 23, 2025</div>
-                        <p>Certified in implementing mobile-first components and layouts across multi-screen dimensions.</p>
+                        <h3>
+                            <a href="responsive-website-cert.jpg"
+                               target="_blank">
+                                Build Your Own Responsive Website ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: CCBP 4.0 Academy / NxtWave™
+                        </div>
+
+                        <div class="cert-date">
+                            Date: September 23, 2025
+                        </div>
+
+                        <p>
+                            Certified in implementing mobile-first
+                            components and layouts across multi-screen
+                            dimensions.
+                        </p>
+
                         <div class="cert-tags">
                             <span class="badge">Bootstrap</span>
                             <span class="badge">Flexbox</span>
                         </div>
                     </div>
-                    <a href="responsive-website-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="responsive-website-cert.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
+
 
                 <div class="cert-card">
                     <div>
-                        <h3><a href="nxtwave.jpg" target="_blank">AI for Students: Build Your Own Generative AI Model ↗</a></h3>
-                        <div class="cert-meta">Issued by: NxtWave™ (Workshop by Mr. Abhinav Devaguptapu)</div>
-                        <div class="cert-date">Date: November 25, 2024</div>
-                        <p>Participated in hands-on training structured to equip tech students with essential core building blocks required in the artificial intelligence era.</p>
+                        <h3>
+                            <a href="nxtwave.jpg"
+                               target="_blank">
+                                AI for Students: Build Your Own Generative AI Model ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: NxtWave™
+                        </div>
+
+                        <div class="cert-date">
+                            Date: November 25, 2024
+                        </div>
+
+                        <p>
+                            Participated in hands-on training structured
+                            to equip tech students with essential core
+                            building blocks required in the artificial
+                            intelligence era.
+                        </p>
                     </div>
-                    <a href="nxtwave.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="nxtwave.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
+
 
                 <div class="cert-card">
                     <div>
-                        <h3><a href="xpm-fundamentals-cert.jpg" target="_blank">XPM 4.0 Fundamentals ↗</a></h3>
-                        <div class="cert-meta">Issued by: CCBP 4.0 Academy / NxtWave™</div>
-                        <div class="cert-date">Date: April 28, 2026</div>
-                        <p>Achieved validation for strategic mindset skills focusing on exponential high-performance execution patterns.</p>
+                        <h3>
+                            <a href="xpm-fundamentals-cert.jpg"
+                               target="_blank">
+                                XPM 4.0 Fundamentals ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: CCBP 4.0 Academy / NxtWave™
+                        </div>
+
+                        <div class="cert-date">
+                            Date: April 28, 2026
+                        </div>
+
+                        <p>
+                            Achieved validation for strategic mindset
+                            skills focusing on exponential high-performance
+                            execution patterns.
+                        </p>
+
                         <div class="cert-tags">
                             <span class="badge">Personal Identity</span>
                             <span class="badge">Integrity</span>
                             <span class="badge">Goal Setting</span>
                         </div>
                     </div>
-                    <a href="xpm-fundamentals-cert.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="xpm-fundamentals-cert.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
+
 
                 <div class="cert-card">
                     <div>
-                        <h3><a href="ycat.jpg" target="_blank">Internship Common Aptitude Test (YCAT) ↗</a></h3>
-                        <div class="cert-meta">Issued by: YCAT (Participation Validation)</div>
-                        <div class="cert-date">Date: 21st April, 2025</div>
-                        <p>Recognized for commitment and aptitude performance in standard validation metrics targeted toward corporate internship readiness.</p>
+                        <h3>
+                            <a href="ycat.jpg"
+                               target="_blank">
+                                Internship Common Aptitude Test (YCAT) ↗
+                            </a>
+                        </h3>
+
+                        <div class="cert-meta">
+                            Issued by: YCAT (Participation Validation)
+                        </div>
+
+                        <div class="cert-date">
+                            Date: 21st April, 2025
+                        </div>
+
+                        <p>
+                            Recognized for commitment and aptitude
+                            performance in standard validation metrics
+                            targeted toward corporate internship readiness.
+                        </p>
                     </div>
-                    <a href="ycat.jpg" target="_blank" class="view-cert-link">📄 View Physical Certificate</a>
+
+                    <a href="ycat.jpg"
+                       target="_blank"
+                       class="view-cert-link">
+                        📄 View Physical Certificate
+                    </a>
                 </div>
 
             </div>
+
         </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>Click the button below to view or download a comprehensive copy of my professional resume document.</p>
-            <div class="center-btn">
-                <a href="resume.pdf" target="_blank" class="btn">View Full Resume (PDF)</a>
+
+        <!-- Projects -->
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        A responsive personal portfolio website built
+                        using HTML and CSS to showcase my education,
+                        skills, certificates, and professional profile.
+                    </p>
+
+                    <a href="https://abhisekparamanik2224.github.io/portfolio/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project ↗
+                    </a>
+                </div>
+
+
+                <div class="project-card">
+                    <h3>Static Website</h3>
+
+                    <p>
+                        A static website project focused on creating
+                        a clean webpage structure and styling using
+                        HTML, CSS, and Bootstrap.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project ↗
+                    </a>
+                </div>
+
+
+                <div class="project-card">
+                    <h3>SQL Database Project</h3>
+
+                    <p>
+                        A database-focused project demonstrating SQL
+                        fundamentals, relational database concepts,
+                        and basic data management.
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+                        View Project ↗
+                    </a>
+                </div>
+
             </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                If you'd like to connect with me professionally,
+                you can find me on LinkedIn and GitHub.
+            </p>
+
+            <div class="social-links">
+
+                <a href="https://www.linkedin.com/in/abhisek-paramanik-26982733a/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="social-btn">
+                    LinkedIn ↗
+                </a>
+
+                <a href="https://github.com/abhisekparamanik2224"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="social-btn">
+                    GitHub ↗
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Resume -->
+        <section id="resume">
+
+            <h2>Resume</h2>
+
+            <p>
+                Click the button below to view or download a comprehensive
+                copy of my professional resume document.
+            </p>
+
+            <div class="center-btn">
+
+                <a href="resume.pdf"
+                   target="_blank"
+                   class="btn">
+                    View Full Resume (PDF)
+                </a>
+
+            </div>
+
         </section>
 
     </div>
 
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Abhisek Paramanik. All rights reserved.</p>
+        <p>
+            &copy; 2026 Abhisek Paramanik. All rights reserved.
+        </p>
     </footer>
 
 </body>
 </html>
+```
